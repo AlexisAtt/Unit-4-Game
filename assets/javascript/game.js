@@ -57,10 +57,12 @@ var char2 = {
     smitherschar: {
         health: 400, 
         attack: 30,
+        id: "smitherHP"
     },
     jenkinsChar: {
         health: 480,
         attack: 60,
+        id: "jenkinsHP"
     }
 }
 
@@ -171,20 +173,20 @@ $("#attack").click(function() {
 
     $("#" + chosenEnemy.id).text(chosenEnemy.health);
 
-    counterAttack();
+   // counterAttack();
 
     //chosenEnemy.health = chosenEnemy.health - Chosen.atack
 });
 
 
 
-function counterAttack () {
+/*function counterAttack () {
     chosenHero.health -= chosenEnemy.attack
     $("#" + chosenHero.id).text(chosenHero.health);
 
 }
 
-
+*/
 
 function winnermessage () {
     alert ("WINNER!")
