@@ -1,0 +1,104 @@
+
+h1 {
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: #305992;
+}
+
+body {
+    background-image: url("../Images/background4.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    color: white;
+
+}
+
+#queenClicker {
+    background-color: transparent;
+}
+
+#commanderClicker {
+    background-color: transparent;
+}
+
+#priestessClicker{
+    background-color: transparent;
+}
+
+#archerClicker {
+    background-color: transparent;
+}
+
+#willieButton {
+    background-color: transparent;
+
+}
+
+#smithers{
+    background-color: transparent;
+}
+
+#jenkins{
+    background-color: transparent;
+}
+
+.herosContainer {
+    background-color: #305992;
+    border-radius: 25px;
+    margin: 5px;
+    border: 10px solid grey;
+    height: 520px;
+
+}
+
+.image {
+    width: 130px;
+    height: 190px;
+    border-radius: 20%;
+    border: 5px solid white;
+      
+}
+
+
+.enemyContainer {
+    background-color:#305992;
+    width: 900px;
+    height: 250px;
+    border-radius: 25px;
+    padding: 50px;
+    height: 490px;
+    width: 1025px;
+    border: 10px solid grey;
+
+}
+
+.monsterimage {
+    width: 130px;
+    height:200px;
+    border-radius: 20%;
+    border: 5px solid black;
+}
+
+.resultsContainer {
+    background-color:#305992; 
+    width: 900px;
+    height: 550px;
+    border-radius: 25px;
+    padding: 50px;
+    margin: 20px;
+}
+
+
+
+
+p {
+    padding: 40px;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#queenHP {
+    color: black;
+}
