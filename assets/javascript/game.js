@@ -131,7 +131,9 @@ $("#jenkinsHP").text(char2.jenkinsChar.health);
 //Enemy Move to Battle Ground//
 
 $("#smithers").click(function() {
-
+if (chosenEnemy){
+    return;
+}
     chosenEnemy = char2.smitherschar
   
     $("#empty-space").replaceWith($("#smithers"));
@@ -141,6 +143,9 @@ $("#smithers").click(function() {
 
 
 $("#willieButton").click(function() {
+    if (chosenEnemy){
+        return;
+    }
 
     chosenEnemy = char2.willie
   
@@ -150,6 +155,9 @@ $("#willieButton").click(function() {
 
 
 $("#jenkins").click(function() {
+    if (chosenEnemy) {
+        return;
+    }
 
     chosenEnemy = char2.jenkinsChar
 
@@ -158,7 +166,7 @@ $("#jenkins").click(function() {
 });
 
 
-
+//Attack Function
 
 
 $("#attack").click(function() {
@@ -168,25 +176,28 @@ $("#attack").click(function() {
     if (chosenEnemy.health <= 0) {
         winnermessage ();
         $("#" + chosenEnemy.id).text("XXXDEADXXX")
+       
         return
     }
 
     $("#" + chosenEnemy.id).text(chosenEnemy.health);
 
-   // counterAttack();
 
-    //chosenEnemy.health = chosenEnemy.health - Chosen.atack
+
+   counterAttack();
+
+    //chsosenEnemy.health = chosenEnemy.health - Chosen.atack
 });
 
 
 
-/*function counterAttack () {
+function counterAttack () {
     chosenHero.health -= chosenEnemy.attack
     $("#" + chosenHero.id).text(chosenHero.health);
 
 }
 
-*/
+
 
 function winnermessage () {
     alert ("WINNER!")
