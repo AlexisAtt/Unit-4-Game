@@ -16,31 +16,38 @@ body {
 
 #queenClicker {
     background-color: transparent;
+    height: 465px;
 }
 
 #commanderClicker {
     background-color: transparent;
+    height: 465px;
 }
 
 #priestessClicker{
     background-color: transparent;
+    height: 465px;
 }
 
 #archerClicker {
     background-color: transparent;
+    height: 465px;
 }
 
 #willieButton {
     background-color: transparent;
+    height: 420px;
 
 }
 
 #smithers{
     background-color: transparent;
+    height: 420px;
 }
 
 #jenkins{
     background-color: transparent;
+    height: 420px;
 }
 
 .herosContainer {
@@ -57,6 +64,7 @@ body {
     height: 190px;
     border-radius: 20%;
     border: 5px solid white;
+    
       
 }
 

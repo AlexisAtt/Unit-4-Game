@@ -26,41 +26,41 @@ var health = 0;
 
 var char1 = {
     queen: {
-        health: 190,
-        attack: 25,
+        health: 290,
+        attack: 55,
         id: "queenHP"
 
 },
     commander: {
-        health: 280,
-        attack: 45,
+        health: 380,
+        attack: 70,
     
 },
     priestess: {
-        health: 140,
-        attack: 25,
+        health: 240,
+        attack: 45,
     },
 
     archer: {
-        health: 195,
-        attack: 35,
+        health: 295,
+        attack: 65,
     },
 }
 
 var char2 = {
     willie: {
-        health: 350,
+        health: 450,
         attack: 20,
         id: "willieHP"
 
     },
     smitherschar: {
-        health: 400, 
+        health: 500, 
         attack: 30,
         id: "smitherHP"
     },
     jenkinsChar: {
-        health: 480,
+        health: 666,
         attack: 60,
         id: "jenkinsHP"
     }
@@ -166,17 +166,29 @@ $("#jenkins").click(function() {
 });
 
 
-//Attack Function
+//Attack Function for Hero//
 
 
 $("#attack").click(function() {
     
     chosenEnemy.health -= chosenHero.attack
 
+    if (chosenHero.health <= 180) {
+        chosenHero.attack + 20;
+        criticalHeroHit ();
+        
+    }
+
     if (chosenEnemy.health <= 0) {
         winnermessage ();
-        $("#" + chosenEnemy.id).text("XXXDEADXXX")
-       
+        $("#" + chosenEnemy.id).text("XXXDEADXXX")   //winning
+        return
+    };
+    if (chosenHero.health <=0) {
+        losermessage ();
+
+        $("#" + chosenHero.id).text("XXDEADXX");   //losing
+        $("#" + chosenEnemy.id).text("WINNER");
         return
     }
 
@@ -192,7 +204,9 @@ $("#attack").click(function() {
 
 
 function counterAttack () {
+
     chosenHero.health -= chosenEnemy.attack
+
     $("#" + chosenHero.id).text(chosenHero.health);
 
 }
@@ -201,6 +215,14 @@ function counterAttack () {
 
 function winnermessage () {
     alert ("WINNER!")
+}
+
+function losermessage () {
+    alert ("YOU LOST! :- (")
+}
+
+function criticalHeroHit () {
+    alert ("CRITICAL HERO HIT! ")
 }
 
 
