@@ -34,16 +34,19 @@ var char1 = {
     commander: {
         health: 380,
         attack: 70,
+        id: "commanderHP"
     
 },
     priestess: {
         health: 240,
         attack: 45,
+        id: "priestessHP"
     },
 
     archer: {
         health: 295,
         attack: 65,
+        id:"archerHP"
     },
 }
 
